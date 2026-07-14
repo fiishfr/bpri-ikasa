@@ -29,16 +29,16 @@ const handleChange = (
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  const message = `*Pesan Baru dari Website BPRI IKASA*
+  const message = `*Haii Admin BPRI*
 
-👤 *Nama:* ${form.nama}
-📧 *Email:* ${form.email}
-📌 *Subjek:* ${form.subjek}
+*Nama:* ${form.nama}
+*Email:* ${form.email}
+*Subjek:* ${form.subjek}
 
-📝 *Pesan:*
+*Pesan:*
 ${form.pesan}`;
 
-  const whatsappUrl = `https://wa.me/6285867575628?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/6285702286474text=${encodeURIComponent(message)}`;
 
   window.open(whatsappUrl, "_blank");
 
