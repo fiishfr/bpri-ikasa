@@ -28,7 +28,7 @@ export default function Hero() {
             </div>
 
             {/* Title */}
-            <h1 className="mt-4 max-w-2xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 lg:text-7xl">
+            <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-7xl">
               Menghubungkan{" "}
               <span className="bg-linear-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                 Alumni
@@ -79,14 +79,14 @@ export default function Hero() {
             className="relative"
           >
             {/* Main Image */}
-            <div className="rounded-[32px] border border-white/40 bg-white/70 p-8 shadow-[0_20px_60px_rgba(0,0,0,.08)] backdrop-blur-xl">
+            <div className="rounded-[32px] border border-white/40 bg-white/70 p-4 shadow-[0_20px_60px_rgba(0,0,0,.08)] backdrop-blur-xl sm:p-8">
               <Image
                 src="/images/BPRI-Logo.png"
                 alt="Hero"
                 width={700}
                 height={700}
                 priority
-                className="mx-auto w-full"
+                className="mx-auto h-auto max-w-full"
               />
             </div>
           </motion.div>
