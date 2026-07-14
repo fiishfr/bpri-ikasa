@@ -6,14 +6,14 @@ export async function POST(req: Request) {
   const { nama, email, subjek, pesan } = await req.json();
 
   await resend.emails.send({
-    from: "Website BPRI IKASA <noreply@bpriikasa@gmail.com>",
+    from: "Website BPRI IKASA <onboarding@resend.dev>",
     to: "bpriikasa@gmail.com",
     subject: subjek,
     html: `
       <h2>Pesan Baru dari Website</h2>
 
-      <p><strong>Nama:</b> ${nama}</p>
-      <p><strong>Email:</b> ${email}</p>
+      <p><strong>Nama:</strong> ${nama}</p>
+      <p><strong>Email:</strong> ${email}</p>
 
       <hr />
 
