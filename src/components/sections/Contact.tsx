@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FaInstagram as Instagram } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 
 export default function Contact() {
   return (
@@ -47,7 +47,7 @@ export default function Contact() {
 
             <div className="flex gap-4">
 
-              <Instagram />
+              <FaInstagram />
 
               <p>@ikasa</p>
 
