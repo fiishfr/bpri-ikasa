@@ -26,31 +26,28 @@ const handleChange = (
   });
 };
 
-const handleSubmit = async (
-  e: React.FormEvent<HTMLFormElement>
-) => {
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(form),
+  const message = `*Pesan Baru dari Website BPRI IKASA*
+
+👤 *Nama:* ${form.nama}
+📧 *Email:* ${form.email}
+📌 *Subjek:* ${form.subjek}
+
+📝 *Pesan:*
+${form.pesan}`;
+
+  const whatsappUrl = `https://wa.me/6285702286474?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappUrl, "_blank");
+
+  setForm({
+    nama: "",
+    email: "",
+    subjek: "",
+    pesan: "",
   });
-
-  if (res.ok) {
-    alert("Pesan berhasil dikirim!");
-
-    setForm({
-      nama: "",
-      email: "",
-      subjek: "",
-      pesan: "",
-    });
-  } else {
-    alert("Gagal mengirim pesan.");
-  }
 };
 
   return (
@@ -212,7 +209,7 @@ const handleSubmit = async (
                   className="flex items-center gap-3 rounded-xl bg-red-700 px-6 py-4 text-white"
                 >
                   <Send size={18}/>
-                  Kirim Pesan
+                  Kirim via Whatsapp
                 </button>
 
               </form>
