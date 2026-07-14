@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   const { nama, email, subjek, pesan } = await req.json();
 
   await resend.emails.send({
-    from: "Website BPRI IKASA <onboarding@resend.dev>",
+    from: "Website BPRI IKASA <noreply@https://bpri-ikasa-bpri.vercel.app/>",
     to: "bpriikasa@gmail.com",
     subject: subjek,
     html: `
