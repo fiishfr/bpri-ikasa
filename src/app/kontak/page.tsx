@@ -38,7 +38,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 📝 *Pesan:*
 ${form.pesan}`;
 
-  const whatsappUrl = `https://wa.me/6285702286474?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/6285867575628?text=${encodeURIComponent(message)}`;
 
   window.open(whatsappUrl, "_blank");
 
