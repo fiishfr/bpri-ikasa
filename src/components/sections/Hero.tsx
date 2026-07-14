@@ -15,8 +15,7 @@ export default function Hero() {
       <div className="absolute right-0 bottom-0 h-125 w-125 rounded-full bg-lime-200/20 blur-3xl" />
 
       <Container>
-        <div className="grid min-h-screen items-center gap-20 py-12 lg:grid-cols-2">
-
+        <div className="grid min-h-[85vh] items-center gap-10 py-16 lg:min-h-screen lg:gap-20 lg:py-12 lg:grid-cols-2">
           {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
