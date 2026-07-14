@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-white">
+    <section className="relative overflow-hidden bg-linear-to-br from-red-50 via-white to-white">
 
       {/* Background */}
-      <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-red-200/20 blur-3xl" />
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-lime-200/20 blur-3xl" />
+      <div className="absolute left-0 top-0 h-125 w-125 rounded-full bg-red-200/20 blur-3xl" />
+      <div className="absolute right-0 bottom-0 h-125 w-125 rounded-full bg-lime-200/20 blur-3xl" />
 
       <Container>
         <div className="grid min-h-screen items-center gap-20 py-12 lg:grid-cols-2">
@@ -31,7 +31,7 @@ export default function Hero() {
             {/* Title */}
             <h1 className="mt-4 max-w-2xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 lg:text-7xl">
               Menghubungkan{" "}
-              <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                 Alumni
               </span>
               <br />
@@ -62,13 +62,12 @@ export default function Hero() {
                 />
               </Link>
 
-              <a
+              <Link
                 href="/dokumen"
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-7 py-4 font-medium text-slate-700 transition hover:border-red-500 hover:text-red-700 hover:shadow-lg"
               >
-                <Download size={18} />
-                Dokumen
-              </a>
+                Lihat Dokumen
+              </Link>
 
             </div>
           </motion.div>

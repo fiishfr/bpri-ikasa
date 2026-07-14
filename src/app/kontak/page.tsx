@@ -6,7 +6,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Clock,
   Send,
 } from "lucide-react";
 

@@ -1,8 +1,6 @@
 import Container from "@/components/layout/Container";
 import {
   Crown,
-  Shield,
-  Users,
   Brain,
   Landmark,
   Database,
@@ -41,7 +39,7 @@ function PositionCard({
   title,
   subtitle,
 }: {
-  icon: any;
+  icon: React.ComponentType<Record<string, unknown>>;
   title: string;
   subtitle: string;
 }) {

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Eye, FileText, BookOpen } from "lucide-react";
+import { FileText } from "lucide-react";
 
 import Container from "@/components/layout/Container";
 
