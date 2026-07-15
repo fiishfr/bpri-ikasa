@@ -74,7 +74,7 @@ const divisions = [
 export default function WorkUnitPage() {
   return (
     <>
-      <section className="bg-linear-to-r from-red-700 to-red-700 py-44 text-white">
+      <section className="bg-linear-to-r from-red-700 to-red-700 py-50 lg:py-44 text-white">
         <Container>
           <span className="rounded-full bg-white/20 px-4 py-2">
             Satuan Kerja
@@ -92,10 +92,10 @@ export default function WorkUnitPage() {
         </Container>
       </section>
 
-      <section className="py-24">
+      <section className="py-16">
         <Container>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
 
             {divisions.map((item) => {
 

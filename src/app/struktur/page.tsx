@@ -87,7 +87,7 @@ export default function StrukturPage() {
         </Container>
       </section>
 
-      <section className="pt-20">
+      <section className="pt-14">
         <Container>
 
           {/* Ketua */}
@@ -102,7 +102,7 @@ export default function StrukturPage() {
         </Container>
       </section>
 
-      <section className="bg-slate-50 py-12">
+      <section className="bg-slate-50 py-10">
         <Container>
 
           <div className="text-center">
@@ -117,7 +117,7 @@ export default function StrukturPage() {
 
           </div>
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <div className="mt-10 grid gap-8 lg:grid-cols-2">
 
             {divisions.map((item) => {
 

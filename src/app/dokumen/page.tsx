@@ -4,7 +4,7 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import { Search, FileText, Download, Eye } from "lucide-react";
 
-const categories = ["Semua", "Pedoman", "Peraturan", "Program"];
+const categories = ["Semua", "Pedoman"];
 
 const documents = [
   {
@@ -26,7 +26,7 @@ export default function DocumentPage() {
     <>
       {/* Hero */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-700 via-red-700 to-red-900 py-32 text-white">
+      <section className="relative overflow-hidden bg-linear-to-br from-red-700 via-red-700 to-red-900 py-32 text-white">
         <div className="absolute -left-32 top-0 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
 
         <div className="absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-orange-300/10 blur-3xl" />
@@ -55,7 +55,7 @@ export default function DocumentPage() {
 
       <section className="mt-10 pb-20">
         <Container>
-          <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xl">
+          <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xs">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <h2 className="text-2xl font-bold">Daftar Dokumen</h2>
@@ -92,7 +92,7 @@ export default function DocumentPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {documents.map((doc) => (
               <div
                 key={doc.id}
@@ -172,7 +172,7 @@ export default function DocumentPage() {
 
           {/* CTA */}
 
-          <div className="mt-20 overflow-hidden rounded-[36px] bg-gradient-to-r from-red-700 to-red-900 p-10 text-white lg:p-14">
+          <div className="mt-10 overflow-hidden rounded-[36px] bg-linear-to-r from-red-700 to-red-900 p-10 text-white lg:p-14">
             <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
               <div className="max-w-2xl">
                 <h2 className="text-3xl font-bold">

@@ -25,13 +25,13 @@ const statistics = [
   },
   {
     title: "Masa Tugas",
-    value: "3–6 Bulan",
+    value: "3-6 Bulan",
     icon: CalendarDays,
     color: "bg-amber-100 text-amber-700",
   },
   {
-    title: "Kolaborasi",
-    value: "Alumni • Siswa • Sekolah",
+    title: "Stakeholders",
+    value: "Alumni, Siswa, Sekolah",
     icon: Users,
     color: "bg-violet-100 text-violet-700",
   },
@@ -42,7 +42,7 @@ export default function Statistics() {
     <section className="bg-red-50 py-12">
       <Container>
 
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center">
 
           <span className="rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-700">
             Sekilas BPRI

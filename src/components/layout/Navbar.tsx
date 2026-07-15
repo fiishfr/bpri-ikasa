@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import Container from "./Container";
 
 type Menu =
@@ -58,13 +59,14 @@ const menus: Menu[] = [
 
 export default function Navbar() {
   const pathname = usePathname();
-
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [bpriOpen, setBpriOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl transition-all duration-300">
       <Container>
-        <div className="flex h-[80px] items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <div className="w-[280px] shrink-0">
+          <div className="w-70 shrink-0">
             <Link
               href="/"
               className="flex items-center gap-2"
@@ -174,7 +176,7 @@ export default function Navbar() {
 
           {/* CTA */}
 
-          <div className="hidden w-[280px] shrink-0 justify-end lg:flex">
+          <div className="hidden w-70 shrink-0 justify-end lg:flex">
             <Link
               href="https://its.id/m/JARINGASPIRASIIKASA"
               className="inline-flex items-center gap-2 rounded-full border border-red-600 px-4 py-2.5 text-sm font-semibold text-red-700 transition-all duration-300 hover:bg-red-700 hover:text-white hover:shadow-md"
@@ -182,8 +184,94 @@ export default function Navbar() {
               Isi Angket
             </Link>
           </div>
+
+          {/* Mobile Button */}
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="rounded-xl p-2 text-slate-700 transition hover:bg-slate-100 lg:hidden"
+          >
+            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
         </div>
       </Container>
+      {/* Mobile Menu */}
+      <div
+        className={`overflow-hidden border-t border-slate-200 bg-white transition-all duration-300 lg:hidden ${
+          mobileOpen ? "max-h-screen" : "max-h-0"
+        }`}
+      >
+        <Container>
+          <div className="space-y-2 py-5">
+            {menus.map((menu) => {
+              // Dropdown
+              if ("children" in menu) {
+                return (
+                  <div key={menu.title}>
+                    <button
+                      onClick={() => setBpriOpen(!bpriOpen)}
+                      className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left font-medium text-slate-700 hover:bg-slate-100"
+                    >
+                      {menu.title}
+
+                      <ChevronDown
+                        className={`transition-transform ${
+                          bpriOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ${
+                        bpriOpen ? "max-h-96" : "max-h-0"
+                      }`}
+                    >
+                      <div className="ml-4 mt-2 space-y-1 border-l border-slate-200 pl-4">
+                        {menu.children.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setMobileOpen(false)}
+                            className={`block rounded-lg px-3 py-2 ${
+                              pathname === item.href
+                                ? "bg-red-50 font-medium text-red-700"
+                                : "text-slate-600 hover:bg-slate-100"
+                            }`}
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={menu.href}
+                  href={menu.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block rounded-xl px-3 py-3 font-medium ${
+                    pathname === menu.href
+                      ? "bg-red-50 text-red-700"
+                      : "text-slate-700 hover:bg-slate-100"
+                  }`}
+                >
+                  {menu.title}
+                </Link>
+              );
+            })}
+
+            <Link
+              href="https://its.id/m/JARINGASPIRASIIKASA"
+              className="mt-4 block rounded-full bg-red-700 px-5 py-3 text-center font-semibold text-white"
+            >
+              Isi Angket
+            </Link>
+          </div>
+        </Container>
+      </div>
     </header>
   );
 }

@@ -82,7 +82,7 @@ export default function MekanismePage() {
         </Container>
       </section>
 
-      <section className="py-24">
+      <section className="py-12 lg:py-24">
         <Container>
 
           <div className="relative mx-auto max-w-5xl">

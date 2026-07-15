@@ -78,7 +78,7 @@ ${form.pesan}`;
 
       {/* Contact */}
 
-      <section className="py-24">
+      <section className="py-14 lg:py-24">
 
         <Container>
 

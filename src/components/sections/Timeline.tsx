@@ -69,7 +69,7 @@ export default function Timeline() {
     <section className="bg-red-50 py-14">
       <Container>
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
 
           <span className="rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-700">
             Mekanisme Kerja
@@ -86,7 +86,7 @@ export default function Timeline() {
 
         </div>
 
-        <div className="relative mx-auto max-w-4xl">
+        <div className="relative mx-2 lg:mx-auto max-w-4xl">
 
           <div className="absolute left-7 top-0 h-full w-1 rounded bg-red-200" />
 

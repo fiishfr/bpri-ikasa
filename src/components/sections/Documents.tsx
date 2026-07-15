@@ -16,7 +16,7 @@ const documents = [
 
 export default function Documents() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-red-50 py-10">
+    <section className="relative overflow-hidden bg-linear-to-b from-white to-red-50 py-10">
       {/* Background */}
       <div className="absolute -left-32 top-0 h-72 w-72 rounded-full bg-red-200/20 blur-3xl" />
       <div className="absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-rose-200/20 blur-3xl" />
@@ -40,7 +40,7 @@ export default function Documents() {
         </div>
 
         {/* Content */}
-        <div className="flex flex-wrap justify-center mt-16 gap-8 lg:grid-cols-2">
+        <div className="flex flex-wrap justify-center mt-10 gap-8 lg:grid-cols-2">
           {documents.map((doc) => (
             <motion.div
               key={doc.title}
