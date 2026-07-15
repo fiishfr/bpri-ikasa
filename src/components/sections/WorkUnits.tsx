@@ -19,12 +19,6 @@ const workUnits = [
     title: "Analisis Strategis",
     icon: Brain,
     color: "from-red-500 to-red-600",
-    tasks: [
-      "Analisis kondisi IKASA",
-      "Identifikasi permasalahan",
-      "Pemetaan kebutuhan alumni",
-      "Perumusan rekomendasi",
-    ],
     description:
       "Melakukan kajian menyeluruh terhadap kondisi organisasi sebagai dasar penyusunan strategi revitalisasi.",
   },
@@ -32,12 +26,6 @@ const workUnits = [
     title: "Perumusan & Tata Kelola",
     icon: Landmark,
     color: "from-blue-500 to-indigo-600",
-    tasks: [
-      "Penyusunan AD/ART",
-      "Visi & Misi",
-      "Struktur Organisasi",
-      "Sistem Tata Kelola",
-    ],
     description:
       "Menyusun seluruh fondasi organisasi agar IKASA memiliki sistem yang profesional dan berkelanjutan.",
   },
@@ -45,12 +33,6 @@ const workUnits = [
     title: "Data & Jejaring Alumni",
     icon: Database,
     color: "from-amber-500 to-orange-500",
-    tasks: [
-      "Database Alumni",
-      "Validasi Data",
-      "Pendataan Angkatan",
-      "Networking Alumni",
-    ],
     description:
       "Mengembangkan basis data alumni yang terintegrasi untuk memperkuat komunikasi lintas angkatan.",
   },
@@ -58,12 +40,6 @@ const workUnits = [
     title: "Transisi & Implementasi",
     icon: Rocket,
     color: "from-violet-600 to-fuchsia-600",
-    tasks: [
-      "Musyawarah Alumni",
-      "Pembentukan IKASA",
-      "Pelantikan Pengurus",
-      "Pendampingan Awal",
-    ],
     description:
       "Mengawal seluruh proses hingga terbentuknya IKASA secara resmi dan berjalan secara efektif.",
   },
@@ -146,28 +122,6 @@ export default function WorkUnits() {
                     {unit.description}
 
                   </p>
-
-                  <div className="mt-8 space-y-4">
-
-                    {unit.tasks.map((task) => (
-
-                      <div
-                        key={task}
-                        className="flex items-center gap-3"
-                      >
-
-                        <CheckCircle2
-                          size={18}
-                          className="text-red-600"
-                        />
-
-                        <span>{task}</span>
-
-                      </div>
-
-                    ))}
-
-                  </div>
 
                   <Link
                     href="/satuan-kerja"
