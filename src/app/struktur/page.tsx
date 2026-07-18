@@ -58,7 +58,7 @@ function PositionCard({
       </p>
 
       <div className="mt-6 rounded-xl border border-dashed p-4 text-slate-400">
-        Prof. Dr. Ahmad Fadhil Arifin, S.Tr.T., M.T.
+        Ahmad Fadhil Arifin
       </div>
     </div>
   );
