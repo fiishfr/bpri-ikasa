@@ -20,6 +20,10 @@ const chairman = {
   name: "Ahmad Fadhil Arifin",
 };
 
+const secretary = {
+  name : "Muhammad Verrel Rayan",
+}
+
 const divisions = [
   {
     title: "Analisis Strategis",
@@ -149,6 +153,28 @@ export default function StrukturPage() {
                 {chairman.name}
               </div>
             </div>
+
+            {/* Garis Penghubung */}
+            <div className="h-12 w-px bg-red-300" />
+
+            {/* Titik */}
+            <div className="h-3 w-3 rounded-full bg-red-600" />
+
+             {/* Sekretaris */}
+            <div className="mt-6 w-full max-w-md rounded-3xl border bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-red-100 text-red-700">
+                <Crown size={30} />
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold">Sekretaris BPRI</h3>
+
+              <p className="mt-2 text-slate-500">Notulen Revitalisasi</p>
+
+              <div className="mt-6 rounded-2xl border border-dashed bg-slate-50 p-4 font-semibold">
+                {secretary.name}
+              </div>
+            </div>
+
           </div>
         </Container>
       </section>
